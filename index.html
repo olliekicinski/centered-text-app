@@ -185,7 +185,7 @@
             <div class="calculator">
                 <input type="number" id="salary" placeholder="Enter your monthly salary">
                 <input type="number" id="savings" placeholder="Enter savings percentage (e.g., 20)">
-                <button onclick="calculateSalary()">Calculate Allocation</button>
+                <button id="calculate-salary">Calculate Allocation</button>
             </div>
             <div id="salary-output" class="output"></div>
         </div>
@@ -197,7 +197,7 @@
             <div class="budget-planner">
                 <input type="number" id="income" placeholder="Enter your total income">
                 <input type="number" id="expenses" placeholder="Enter your total expenses">
-                <button onclick="calculateBudget()">Create Budget</button>
+                <button id="calculate-budget">Create Budget</button>
             </div>
             <div id="budget-output" class="output"></div>
         </div>
@@ -207,7 +207,7 @@
     <!-- JavaScript for Calculators -->
     <script>
         // Salary Allocation Calculator
-        function calculateSalary() {
+        document.getElementById('calculate-salary').addEventListener('click', function() {
             const salary = parseFloat(document.getElementById('salary').value);
             const savingsPercentage = parseFloat(document.getElementById('savings').value);
 
@@ -230,10 +230,10 @@
                 Fun Money: $${funMoneyAmount.toFixed(2)}<br>
                 Expenses: $${expensesAmount.toFixed(2)}
             `;
-        }
+        });
 
         // Budget Planner
-        function calculateBudget() {
+        document.getElementById('calculate-budget').addEventListener('click', function() {
             const income = parseFloat(document.getElementById('income').value);
             const expenses = parseFloat(document.getElementById('expenses').value);
 
@@ -247,7 +247,3 @@
                 <strong>Budget Summary:</strong><br>
                 Total Income: $${income.toFixed(2)}<br>
                 Total Expenses: $${expenses.toFixed(2)}<br>
-                Remaining Budget: $${remainingBudget.toFixed(2)}
-            `;
-        }
-   
