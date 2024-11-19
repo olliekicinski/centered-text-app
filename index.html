@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Get Wealthy</title>
+    <title>How To Get Wealthy (The Fun Way!)</title>
     <style>
+        /* Background Styles */
         body {
             display: flex;
             justify-content: center;
@@ -12,25 +13,123 @@
             flex-direction: column;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             background: linear-gradient(to bottom, #808080, #ffffff);
             padding: 30px;
+            overflow: hidden;
+            position: relative;
         }
         h1 {
             color: #333;
+            font-size: 3em;
             text-align: center;
+            text-shadow: 2px 2px 5px #fff;
+            font-family: 'Impact', sans-serif;
         }
         ol {
             color: #333;
-            font-size: 20px;
+            font-size: 22px;
             line-height: 2;
+            list-style-type: decimal;
+            font-family: 'Arial', sans-serif;
+            max-width: 600px;
+            text-align: left;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
         }
         li {
-            margin: 10px 0;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        li:hover {
+            transform: scale(1.1) rotate(5deg);
+            color: #007BFF;
+        }
+        #confetti {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .floating-text {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3em;
+            font-family: 'Courier New', Courier, monospace;
+            color: #FF6347;
+            animation: float 5s infinite;
+        }
+        @keyframes float {
+            0% { top: 10%; }
+            50% { top: 20%; }
+            100% { top: 10%; }
+        }
+        .rulex-btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #FF6347;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        .rulex-btn:hover {
+            background-color: #FF4500;
         }
     </style>
 </head>
 <body>
-    <a href="https://github.com/olliekicinski/centered-text-app/blob/main/rulex.txt">Secret Sauce</a>
+    <h1>How To Get Wealthy (The Fun Way!)</h1>
+    <div class="floating-text">💸💰 Welcome to Your Wealth Journey! 💰💸</div>
+
+    <ol>
+        <li onclick="celebrate()">Start by understanding the value of time and money. Invest your time in learning, and invest your money wisely.</li>
+        <li onclick="celebrate()">Live below your means. Avoid lifestyle inflation, and save or invest the difference.</li>
+        <li onclick="celebrate()">Leverage your skills and knowledge. Find ways to maximize your earning potential, whether through side projects or career advancement.</li>
+        <li onclick="celebrate()">Invest in assets that appreciate over time. Stocks, real estate, or a business can provide long-term wealth growth.</li>
+        <li onclick="celebrate()">Build multiple income streams. Don’t rely on just one source of income to achieve financial independence.</li>
+        <li onclick="celebrate()">Be patient and disciplined. Building wealth is a long-term commitment, and requires consistent effort and smart decisions.</li>
+        <li onclick="celebrate()">Surround yourself with like-minded individuals. Networking with successful people can lead to opportunities and growth.</li>
+        <li onclick="celebrate()">Never stop learning. Keep educating yourself about finance, investing, and personal development to stay ahead in the wealth-building process.</li>
+    </ol>
+
+    <button class="rulex-btn" onclick="generateRandomConfetti()">Get More Wealthy Secrets! 💰</button>
+
+    <div id="confetti">
+        <!-- This is where random confetti will pop up -->
+        🎉 🎉 🎉 🎉 🎉 🎉
+    </div>
+
+    <script>
+        // Fun confetti effect
+        function generateRandomConfetti() {
+            const confetti = document.getElementById('confetti');
+            confetti.style.opacity = 1;
+            setTimeout(() => {
+                confetti.style.opacity = 0;
+            }, 1500);
+        }
+
+        // Fun celebration animation on rule click
+        function celebrate() {
+            const confetti = document.getElementById('confetti');
+            confetti.innerHTML = '🎉 You did it! 🎉';
+            confetti.style.opacity = 1;
+            setTimeout(() => {
+                confetti.style.opacity = 0;
+            }, 1500);
+        }
+    </script>
 </body>
 </html>
