@@ -3,101 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wealth Building Mastery</title>
+    <title>Master Your Wealth</title>
     <style>
-        /* General Styles */
+        /* Global Styles */
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f7fb;
-            color: #333;
-        }
-
-        h1, h2 {
-            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f4f7;
             color: #2c3e50;
-            margin-top: 20px;
         }
 
-        /* Header */
         header {
-            background-color: #34495e;
-            color: white;
+            background-color: #1abc9c;
             padding: 20px 0;
+            text-align: center;
         }
 
         header h1 {
+            font-size: 3em;
+            color: white;
             margin: 0;
-            font-size: 2.5em;
         }
 
-        /* Navigation Bar */
         nav {
             display: flex;
             justify-content: center;
-            background-color: #2c3e50;
+            background-color: #34495e;
             padding: 10px 0;
         }
 
         nav a {
             color: white;
-            padding: 10px 15px;
+            padding: 12px 18px;
             text-decoration: none;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
+            font-size: 1.2em;
+            text-align: center;
+            flex-grow: 1;
         }
 
         nav a:hover {
-            background-color: #1abc9c;
+            background-color: #16a085;
         }
 
-        /* Main Content */
         .container {
             width: 80%;
-            margin: 20px auto;
+            margin: 40px auto;
         }
 
         .section {
-            margin-bottom: 40px;
+            background-color: white;
             padding: 30px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
         }
 
-        .section-title {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #2c3e50;
+        .section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1abc9c;
+        }
+
+        .section p {
+            text-align: justify;
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #34495e;
         }
 
         .button {
             background-color: #1abc9c;
             color: white;
-            border: none;
-            padding: 15px;
             font-size: 1.2em;
+            padding: 12px;
+            border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
             display: block;
             margin: 20px auto;
+            width: 200px;
+            transition: background-color 0.3s ease;
         }
 
         .button:hover {
             background-color: #16a085;
         }
 
-        /* Calculator Styles */
-        .calculator {
+        .calculator, .budget-planner {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-top: 30px;
         }
 
-        .calculator input {
+        .calculator input, .budget-planner input {
             padding: 12px;
             font-size: 1.1em;
             border-radius: 8px;
@@ -105,7 +105,7 @@
             width: 100%;
         }
 
-        .calculator button {
+        .calculator button, .budget-planner button {
             background-color: #3498db;
             color: white;
             font-size: 1.2em;
@@ -116,25 +116,24 @@
             cursor: pointer;
         }
 
-        .calculator button:hover {
+        .calculator button:hover, .budget-planner button:hover {
             background-color: #2980b9;
         }
 
         .output {
-            margin-top: 20px;
             font-size: 1.4em;
             font-weight: bold;
             text-align: center;
+            margin-top: 20px;
             color: #2c3e50;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .container {
                 width: 95%;
             }
 
-            .calculator {
+            .calculator, .budget-planner {
                 grid-template-columns: 1fr;
             }
         }
@@ -142,61 +141,72 @@
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-        <h1>Wealth Building Mastery</h1>
+        <h1>Master Your Wealth</h1>
     </header>
 
     <!-- Navigation Bar -->
     <nav>
-        <a href="#tips">Investing Tips</a>
+        <a href="#overview">Overview</a>
+        <a href="#investment-tips">Investment Tips</a>
         <a href="#calculators">Calculators</a>
-        <a href="#resources">Resources</a>
+        <a href="#budget-planner">Budget Planner</a>
     </nav>
 
     <!-- Main Content -->
     <div class="container">
         
-        <!-- Investing Tips Section -->
-        <div class="section" id="tips">
-            <h2 class="section-title">Smart Investing Tips</h2>
-            <p>Investing your money wisely is one of the most important steps towards achieving financial independence. Here are some tips:</p>
+        <!-- Overview Section -->
+        <div class="section" id="overview">
+            <h2>Overview</h2>
+            <p>Welcome to the Wealth Mastery platform! Here, you'll find tools, resources, and tips to help you effectively manage your salary, grow your wealth through smart investments, and ensure a solid financial future. From budgeting calculators to investment guides, we've got everything to set you on the path to financial success.</p>
+        </div>
+
+        <!-- Investment Tips Section -->
+        <div class="section" id="investment-tips">
+            <h2>Smart Investment Tips</h2>
+            <p>Investing is essential for growing your wealth, but it's crucial to do so wisely. Here are a few tips:</p>
             <ul>
-                <li><strong>Start early:</strong> The earlier you begin investing, the more time your money has to grow.</li>
-                <li><strong>Diversify your portfolio:</strong> Don't put all your money in one basket. Spread your investments across different assets.</li>
-                <li><strong>Reinvest dividends:</strong> Reinvesting your dividends can significantly increase your returns over time.</li>
-                <li><strong>Stay patient:</strong> The market will fluctuate. Keep a long-term perspective and avoid panic selling.</li>
-                <li><strong>Consult a financial advisor:</strong> Consider seeking advice to create a personalized investment strategy.</li>
+                <li><strong>Start early:</strong> The earlier you invest, the more your money can grow thanks to compound interest.</li>
+                <li><strong>Diversify:</strong> Don't put all your money in one investment. Spread it out to minimize risk.</li>
+                <li><strong>Do your research:</strong> Always research before making any investment. Know the risks and rewards.</li>
+                <li><strong>Reinvest your returns:</strong> Reinvest your dividends and capital gains to compound your returns.</li>
             </ul>
         </div>
 
-        <!-- Salary Division Calculator Section -->
+        <!-- Calculators Section -->
         <div class="section" id="calculators">
-            <h2 class="section-title">Salary Allocation Calculator</h2>
-            <p>Use this tool to divide your salary into various categories such as savings, investments, and expenses.</p>
+            <h2>Salary & Investment Calculators</h2>
+
+            <!-- Salary Allocation Calculator -->
+            <h3>Salary Allocation Calculator</h3>
+            <p>Use this tool to divide your monthly salary into savings, investments, and expenses.</p>
             <div class="calculator">
                 <input type="number" id="salary" placeholder="Enter your monthly salary">
-                <input type="number" id="savings" placeholder="Enter percentage for savings (e.g., 20)">
+                <input type="number" id="savings" placeholder="Enter savings percentage (e.g., 20)">
                 <button onclick="calculateSalary()">Calculate Allocation</button>
             </div>
             <div id="salary-output" class="output"></div>
         </div>
 
-        <!-- Resources Section -->
-        <div class="section" id="resources">
-            <h2 class="section-title">Additional Resources</h2>
-            <p>Explore these resources to enhance your financial literacy:</p>
-            <ul>
-                <li><a href="https://www.investopedia.com/" target="_blank">Investopedia - Financial Education</a></li>
-                <li><a href="https://www.bogleheads.org/" target="_blank">Bogleheads - Investing Forum</a></li>
-                <li><a href="https://www.morningstar.com/" target="_blank">Morningstar - Investment Research</a></li>
-            </ul>
+        <!-- Budget Planner Section -->
+        <div class="section" id="budget-planner">
+            <h2>Budget Planner</h2>
+            <p>Manage your finances better by tracking income and expenses with our Budget Planner.</p>
+            <div class="budget-planner">
+                <input type="number" id="income" placeholder="Enter your total income">
+                <input type="number" id="expenses" placeholder="Enter your total expenses">
+                <button onclick="calculateBudget()">Create Budget</button>
+            </div>
+            <div id="budget-output" class="output"></div>
         </div>
 
     </div>
 
-    <!-- JavaScript -->
+    <!-- JavaScript for Calculators -->
     <script>
+        // Salary Allocation Calculator
         function calculateSalary() {
             const salary = parseFloat(document.getElementById('salary').value);
             const savingsPercentage = parseFloat(document.getElementById('savings').value);
@@ -208,9 +218,9 @@
 
             const savingsAmount = (savingsPercentage / 100) * salary;
             const expensesAmount = salary - savingsAmount;
-            const investmentsAmount = savingsAmount * 0.50;  // 50% of savings goes to investments
-            const emergencyFundAmount = savingsAmount * 0.30; // 30% to emergency fund
-            const funMoneyAmount = savingsAmount * 0.20; // 20% for leisure
+            const investmentsAmount = savingsAmount * 0.50;
+            const emergencyFundAmount = savingsAmount * 0.30;
+            const funMoneyAmount = savingsAmount * 0.20;
 
             document.getElementById('salary-output').innerHTML = `
                 <strong>Salary Breakdown:</strong><br>
@@ -221,7 +231,23 @@
                 Expenses: $${expensesAmount.toFixed(2)}
             `;
         }
-    </script>
 
-</body>
-</html>
+        // Budget Planner
+        function calculateBudget() {
+            const income = parseFloat(document.getElementById('income').value);
+            const expenses = parseFloat(document.getElementById('expenses').value);
+
+            if (isNaN(income) || isNaN(expenses) || income <= 0 || expenses < 0) {
+                document.getElementById('budget-output').innerText = "Please enter valid numbers!";
+                return;
+            }
+
+            const remainingBudget = income - expenses;
+            document.getElementById('budget-output').innerHTML = `
+                <strong>Budget Summary:</strong><br>
+                Total Income: $${income.toFixed(2)}<br>
+                Total Expenses: $${expenses.toFixed(2)}<br>
+                Remaining Budget: $${remainingBudget.toFixed(2)}
+            `;
+        }
+   
